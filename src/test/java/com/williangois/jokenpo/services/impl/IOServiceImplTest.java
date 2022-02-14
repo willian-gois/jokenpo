@@ -76,7 +76,7 @@ class IOServiceImplTest {
 
 			assertEquals("A partida deu empate!", ioService.getMatchResult(response));
 		} catch (IOException e) {
-			e.printStackTrace();
+			fail(e.getMessage(), e);
 		}
 	}
 
@@ -95,7 +95,7 @@ class IOServiceImplTest {
 
 			assertEquals("O vencedor da partida foi Jane Doe!", ioService.getMatchResult(response));
 		} catch (IOException e) {
-			e.printStackTrace();
+			fail(e.getMessage(), e);
 		}
 	}
 
